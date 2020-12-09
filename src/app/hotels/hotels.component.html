@@ -1,0 +1,119 @@
+<!-- <ul>
+    <li *ngFor="let hotel of hotels">
+    <a [routerLink]="['detail', hotel.id]">{{hotel.name}}</a>    
+    </li>
+</ul> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Hotels</title>
+
+</head>
+
+<body>
+  
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+
+        <h1 class="my-4">Danh sách nhà nghỉ</h1>
+        <a routerLink="add-hotel"><h4>Thêm mới</h4></a>
+        <!-- Blog Post -->
+        <div class="card mb-4 mt-4" *ngFor="let hotel of hotels">
+          <img class="" [src]="hotel.image" height="300px">
+          <div class="card-body">
+            <h3 class="card-title"><a [routerLink]="['detail', hotel.id]">{{hotel.name}}</a></h3>
+            <p class="card-text">{{hotel.description}}</p>
+            <a [routerLink]="['detail', hotel.id]">Xem chi tiết</a>
+          </div>
+          <!-- <div class="card-footer text-muted">
+            Posted on January 1, 2020 by
+            <a href="#">Start Bootstrap</a>
+          </div> -->
+        </div>
+
+
+
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4"  style="margin-top: 125px;">
+
+        <!-- Search Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Tìm kiếm</h5>
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-append">
+                <button class="btn btn-secondary" type="button">Search!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+         <!-- Categories Widget -->
+         <div class="category">
+          <h5 class="card-header">Danh mục</h5>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <a href="#">Nhà nghỉ <i class="fa fa-star-o"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></i></a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">Nhà nghỉ <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">Nhà nghỉ <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">Nhà nghỉ <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></a>
+                  </li>
+                </ul>
+              </div>
+        
+
+        <!-- Side Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">ADS</h5>
+          <div class="card-body">
+            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

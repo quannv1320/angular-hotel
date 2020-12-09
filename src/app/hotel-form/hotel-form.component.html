@@ -1,0 +1,25 @@
+<div class="container">
+    <!-- <pre>{{hotelForm.value | json}}</pre> -->
+    <h3>Thêm mới khách sạn</h3>
+    <form [formGroup]="hotelForm">
+        <div class="mb-3">
+            <label for="" class="form-label">Tên khách sạn</label>
+            <input class="form-control" type="text" formControlName = "name">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Ảnh khách sạn</label>
+            <input class="form-control" type="text" formControlName = "image">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Địa chỉ</label>
+            <input class="form-control" type="text" formControlName = "address">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Miêu tả</label>
+            <input class="form-control" type="text" formControlName = "description">
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="saveHotel()">Lưu</button>
+        </div>
+    </form>
+</div>

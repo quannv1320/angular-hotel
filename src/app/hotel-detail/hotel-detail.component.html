@@ -1,0 +1,7 @@
+<h2>Name: {{hotelData.name}}</h2>
+<img [src]="hotelData.image" width="150">
+<br>
+<h3>Address: {{hotelData.address}}</h3>
+<h3>Country: {{hotelData.description}}</h3>
+<button [routerLink]="['../../edit-hotel', hotelData.id]">Cập nhật</button>
+<button (click)="removeHotel()">Delete</button>

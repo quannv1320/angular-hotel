@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -124,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "angular-hotel"
+  "defaultProject": "angular-hotel",
+  "cli": {
+    "analytics": "0429770e-d861-4e43-b4b9-cf33318bda8e"
+  }
 }
