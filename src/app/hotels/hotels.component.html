@@ -30,15 +30,15 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
 
-        <h1 class="my-4">Danh sách nhà nghỉ</h1>
-        <a routerLink="add-hotel"><h4>Thêm mới</h4></a>
+        <h1 class="my-4">List Hotel</h1>
+        <a routerLink="add-hotel"><h4>Add new</h4></a>
         <!-- Blog Post -->
         <div class="card mb-4 mt-4" *ngFor="let hotel of hotels">
           <img class="" [src]="hotel.image" height="300px">
           <div class="card-body">
             <h3 class="card-title"><a [routerLink]="['detail', hotel.id]">{{hotel.name}}</a></h3>
             <p class="card-text">{{hotel.description}}</p>
-            <a [routerLink]="['detail', hotel.id]">Xem chi tiết</a>
+            <a [routerLink]="['detail', hotel.id]">More...</a>
           </div>
           <!-- <div class="card-footer text-muted">
             Posted on January 1, 2020 by
@@ -51,41 +51,24 @@
       </div>
 
       <!-- Sidebar Widgets Column -->
-      <div class="col-md-4"  style="margin-top: 125px;">
-
-        <!-- Search Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Tìm kiếm</h5>
-          <div class="card-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-append">
-                <button class="btn btn-secondary" type="button">Search!</button>
-              </span>
-            </div>
-          </div>
-        </div>
-
+      <div class="col-lg-4" style="margin-top: 67px;">
          <!-- Categories Widget -->
-         <div class="category">
-          <h5 class="card-header">Danh mục</h5>
+          <h3 class="my-4">Category</h3>
                 <ul class="list-group">
                   <li class="list-group-item">
-                    <a href="#">Nhà nghỉ <i class="fa fa-star-o"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></i></a>
+                    <a href="#">Hotel <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9733;</span></a>
                   </li>
                   <li class="list-group-item">
-                    <a href="#">Nhà nghỉ <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></a>
+                    <a href="#">Hotel <span class="text-warning">&#9733; &#9733; &#9733; &#9733;</span></a>
                   </li>
                   <li class="list-group-item">
-                    <a href="#">Nhà nghỉ <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></a>
+                    <a href="#">Hotel <span class="text-warning">&#9733; &#9733; &#9733;</span></a>
                   </li>
                   <li class="list-group-item">
-                    <a href="#">Nhà nghỉ <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></a>
+                    <a href="#">Hotel <span class="text-warning">&#9733; &#9733;</span></a>
                   </li>
                 </ul>
-              </div>
-        
-
+  
         <!-- Side Widget -->
         <div class="card my-4">
           <h5 class="card-header">ADS</h5>

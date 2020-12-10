@@ -1,7 +1,40 @@
-<h2>Name: {{hotelData.name}}</h2>
+<!-- <h2>Tên nhà nghỉ: {{hotelData.name}}</h2>
 <img [src]="hotelData.image" width="150">
 <br>
-<h3>Address: {{hotelData.address}}</h3>
-<h3>Country: {{hotelData.description}}</h3>
+<h3>Địa chỉ: {{hotelData.address}}</h3>
+<h3>Mô tả: {{hotelData.description}}</h3>
 <button [routerLink]="['../../edit-hotel', hotelData.id]">Cập nhật</button>
-<button (click)="removeHotel()">Delete</button>
+<button (click)="removeHotel()">Delete</button> -->
+
+<div class="container mt-5">
+    <div class="card mb-3">
+        <div class="row">
+          <div class="col-6">
+            <img [src]="hotelData.image" width="100%">
+          </div>
+          <div class="col-6">
+            <div class="card-body">
+              <h2 class="card-title">{{hotelData.name}}</h2>
+              <p>Rate: <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9733;</span></p>
+              <div class="row">
+                <div class="col-4">
+                  <p>Phone Number: </p>
+                  <p>Address: </p>
+                  <p>Description: </p>
+                </div>
+                <div class="col-6">
+                  <p>{{hotelData.phone}}</p>
+                  <p>{{hotelData.address}}</p>
+                  <p>{{hotelData.description}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="ml-4">
+                <button class="btn btn-primary" [routerLink]="['../../edit-hotel', hotelData.id]">Cập nhật</button>
+                &nbsp;
+                <button class="btn btn-danger"  (click)="removeHotel()">Delete</button>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

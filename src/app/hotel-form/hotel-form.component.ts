@@ -15,7 +15,8 @@ export class HotelFormComponent implements OnInit {
     name: new FormControl(''),
     image: new FormControl(''),
     address: new FormControl(''),
-    description: new FormControl('')
+    description: new FormControl(''),
+    phone: new FormControl('')
   });
   constructor(
     private hotelService: HotelService,
