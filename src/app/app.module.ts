@@ -11,6 +11,7 @@ import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HotelFormComponent } from './hotel-form/hotel-form.component';
 import { MenuComponent } from './menu/menu.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { MenuComponent } from './menu/menu.component';
       {path: '', component: HotelsComponent},
       {path: 'detail/:hotelId', component: HotelDetailComponent},
       {path: 'add-hotel', component: HotelFormComponent},
-      {path: 'edit-hotel/:id', component: HotelFormComponent}
+      {path: 'edit-hotel/:id', component: HotelFormComponent},
     ])
   ],
   providers: [],

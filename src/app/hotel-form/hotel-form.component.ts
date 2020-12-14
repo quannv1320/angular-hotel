@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, ActivatedRoute, Router } from '@angular/router';
 import { HotelService } from '../hotel.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -12,12 +12,34 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class HotelFormComponent implements OnInit {
   hotelForm = new FormGroup({
     id: new FormControl(null),
-    name: new FormControl(''),
-    image: new FormControl(''),
-    address: new FormControl(''),
-    description: new FormControl(''),
-    phone: new FormControl('')
+    name: new FormControl('',[
+      Validators.required,
+      Validators.minLength(4),
+      Validators.maxLength(20)
+    ]),
+    image: new FormControl('',[
+      Validators.required,
+      Validators.pattern('/\(gif|jpe?g|tiff|png|webp|bmp)$/i')
+    ]),
+    address: new FormControl('',[
+      Validators.required,
+      Validators.minLength(4),
+      Validators.maxLength(20)
+    ]),
+
+    description: new FormControl('',[
+      Validators.required
+    ]),
+    phone: new FormControl('',[
+      Validators.required
+    ])
   });
+
+  get name() { return this.hotelForm.get('name'); };
+  get address() { return this.hotelForm.get('address'); }
+
+
+
   constructor(
     private hotelService: HotelService,
     private router: Router,

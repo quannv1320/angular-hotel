@@ -1,25 +1,53 @@
 <div class="container">
-    <!-- <pre>{{hotelForm.value | json}}</pre> -->
-    <h3>Add new Hotel</h3>
-    <form [formGroup]="hotelForm">
-        <div class="mb-3">
-            <label for="" class="form-label">Hotel name</label>
-            <input class="form-control" type="text" formControlName = "name">
+    <div class="row">
+        <div class="col-8">
+                    <!-- <pre>{{hotelForm.value | json}}</pre> -->
+            <h3>Add new Hotel</h3>
+            <form [formGroup]="hotelForm">
+                <div class="mb-3">
+                    <label for="" class="form-label">Hotel name</label>
+                    <input class="form-control" type="text" formControlName = "name" required>
+                    <div class="" *ngIf="name.invalid && (name.dirty || name.touched)">
+                        <span style="color: red;" *ngIf="name.errors.required">Hãy nhập tên khách sạn</span>
+                        <span style="color: red;" *ngIf="name.errors.minLength">Tên khách sạn cần lớn hơn 3 ký tự</span>
+                        <span style="color: red;" *ngIf="name.errors.maxLength">Tên khách sạn không vượt quá 20 ký tự</span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Phone Number</label>
+                    <input class="form-control" type="text" formControlName = "phone">
+                    <div class="" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+                        <span style="color: red;" *ngIf="phone.errors.required">Hãy nhập SĐT khách sạn</span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Hotel image</label>
+                    <input class="form-control" type="text" formControlName = "image">
+                    <div class="" *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+                        <span style="color: red;" *ngIf="phone.errors.required">Hãy nhập đường dẫn ảnh</span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Address</label>
+                    <input class="form-control" type="text" formControlName = "address">
+                    <div class="" *ngIf="address.invalid && (address.dirty || address.touched)">
+                        <span style="color: red;" *ngIf="address.errors.required">Hãy nhập địa chỉ</span>
+                        <span style="color: red;" *ngIf="address.errors.minLength">Địa chỉ cần lớn hơn 3 ký tự</span>
+                        <span style="color: red;" *ngIf="address.errors.maxLength">Địa chỉ không vượt quá 20 ký tự</span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Desciption</label>
+                    <textarea class="form-control" type="text" formControlName = "description"  rows="3"></textarea>
+                    <div class="" *ngIf="description.invalid && (description.dirty || description.touched)">
+                        <span style="color: red;" *ngIf="description.errors.required">Hãy nhập miêu tả khách sạn</span>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-primary" (click)="saveHotel()">Save</button>
+                </div>
+            </form>
         </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Hotel image</label>
-            <input class="form-control" type="text" formControlName = "image">
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Address</label>
-            <input class="form-control" type="text" formControlName = "address">
-        </div>
-        <div class="mb-3">
-            <label for="" class="form-label">Desciption</label>
-            <input class="form-control" type="text" formControlName = "description">
-        </div>
-        <div>
-            <button class="btn btn-primary" (click)="saveHotel()">Save</button>
-        </div>
-    </form>
+    </div>
 </div>
+

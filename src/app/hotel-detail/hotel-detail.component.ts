@@ -34,7 +34,7 @@ export class HotelDetailComponent implements OnInit {
   }
 
   removeHotel(){
-    let conf = confirm('Chắc chưa?');
+    let conf = confirm('Do you really want to delete?');
     if(conf){
       this.hotelService.removeHotelById(this.hotelData.id).subscribe(data => {
         this. router.navigate(['']);
